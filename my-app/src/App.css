@@ -1,14 +1,53 @@
-.App {
-  text-align: center;
+body{
+  font-size: 18px;
+  background-color: lightblue;
+  font-family: monospace;
+  
 }
-
 #wrap{
   display: flex;
-  border: 1px solid;
+  border: 1px solid white;
+  flex-direction: column;
   width: 600px;
   justify-content: center;
   margin: 0 auto;
+  background-color: lightblue;
+  align-items: center;
+}
+#length{
+  display: flex;  
+}
+.br-des{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+button{
+  font-size: 20px;
+  padding: 5px;
+  border: none;
+  margin: 15px;
+  padding: 0 10px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  font-family: monospace;
+  
+  
 }
 #test{
   margin: 20px;
+  text-align: center;
+}
+#time-left{
+/*   background-color: aliceblue; */
+  padding: 10px;
+}
+#start_stop, #reset{
+  padding: 5px 10px;
+}
+
+#timer{
+  border: 1px solid white;
+  border-radius: 20px;
 }
