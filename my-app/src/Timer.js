@@ -121,56 +121,62 @@ const Timer = () => {
     return (
         <>
             <div id="wrap">
-                <div id="test">
+                <h1>25+5 clock</h1>
+                <div id='length'>
+                    <div id="test">
 
-                    <p id="break-label">Break Length</p>
+                        <p id="break-label">Break Length</p>
+                        <div className='br-des'>
+                            <ButtonsComp
+                                id='break-decrement'
+                                onClick={() => onDecrement(true)}
+                                text='br-'
+                            />
 
-                    <ButtonsComp
-                        id='break-decrement'
-                        onClick={() => onDecrement(true)}
-                        text='br-'
-                    />
+                            <States
+                                id='break-length'
+                                state={state.br}
+                            />
 
-                    <States
-                        id='break-length'
-                        state={state.br}
-                    />
+                            <ButtonsComp
+                                id='break-increment'
+                                onClick={() => onIncrement(true)}
+                                text='br+'
+                            />
+                        </div>
+                    </div>
 
-                    <ButtonsComp
-                        id='break-increment'
-                        onClick={() => onIncrement(true)}
-                        text='br+'
-                    />
+                    <div id="test">
+                        <p id="session-label">Session Length</p>
+                        <div className='br-des'>
+                            <ButtonsComp
+                                id='session-decrement'
+                                onClick={() => onDecrement(false)}
+                                text='ses-'
+                            />
+
+                            <States
+                                id='session-length'
+                                state={state.sess}
+                            />
+
+                            <ButtonsComp
+                                id='session-increment'
+                                onClick={() => onIncrement(false)}
+                                text='ses+'
+                            />
+                        </div>
+                    </div>
                 </div>
-
                 <div id="test">
-                    <p id="session-label">Session Length</p>
-
-                    <ButtonsComp
-                        id='session-decrement'
-                        onClick={() => onDecrement(false)}
-                        text='ses-'
-                    />
-
-                    <States
-                        id='session-length'
-                        state={state.sess}
-                    />
-
-                    <ButtonsComp
-                        id='session-increment'
-                        onClick={() => onIncrement(false)}
-                        text='ses+'
-                    />
-
-                </div>
-                <div id="test">
-                    <p id="timer-label">{over ? 'Break' : 'Session'}</p>
-                    <p id="time-left">{`${m
-                        .toString()
-                        .padStart(2, "0")}:${s
+                    <div id='timer'>
+                        <p id="timer-label">{over ? 'Break' : 'Session'}</p>
+                        <p id="time-left">{`${m
                             .toString()
-                            .padStart(2, "0")}`}</p>
+                            .padStart(2, "0")}:${s
+                                .toString()
+                                .padStart(2, "0")}`}</p>
+                    </div>
 
                     <ButtonsComp
                         id='start_stop'
@@ -178,7 +184,7 @@ const Timer = () => {
                         text={isPaused ? 'start' : 'pause'}
                     />
 
-                     <ButtonsComp
+                    <ButtonsComp
                         id='reset'
                         onClick={onReset}
                         text='reset'

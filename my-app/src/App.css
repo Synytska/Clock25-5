@@ -4,6 +4,9 @@ body{
   font-family: monospace;
   
 }
+.App{
+  margin-top: 5rem;
+}
 #wrap{
   display: flex;
   border: 1px solid white;
